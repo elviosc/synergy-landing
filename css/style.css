@@ -26,7 +26,7 @@ h4 { font-weight: 200; }
 .bg {
   position: absolute;
   width: 100%;
-  height: 30.5em;
+  height: 20em;
   background: url(../img/night-city.jpg);
   background-position: 0 -156px;
 }
@@ -45,21 +45,40 @@ h4 { font-weight: 200; }
   display: block;
   position: absolute;
   width: 100%;
-  height: 7em;
+  height: 4em;
   bottom: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 -59px 65px 12px rgba(0, 0, 0, 0.5);
+}
+.hero h1 {
+  font-size: 1.8em;
+  margin: 1em auto;
+  max-width: 12em;
+}
+.hero h4 {
+  padding: 0 2%;
+  font-size: 1.1em;
+  max-width: 30em;
+  margin: 0 auto;
 }
 .hero h1, .hero h4 {
   color: #fff;
   text-shadow: 0 0 1px rgba(0,0,0,1), 0 0 5px rgba(0,0,0,0.2);
 }
 .logos {
-  margin-top: 70px;
+  margin-top: 40px;
   margin-bottom: 20px;
   opacity: 0.8;
 }
-.logos h4 { margin-top: 0px; text-shadow: none; }
-.main { font-size: 18px; }
+.logos h4 {
+  margin-top: 0px;
+  text-shadow: none;
+  font-size: 1.2em;
+}
+.main {
+  font-size: 18px;
+  padding-top: .5em;
+}
 .main ul { list-style: none; }
 .main li {
     margin-bottom: 10px;
@@ -244,4 +263,31 @@ footer {
 .copyright {
   color: #aaa;
   font-size: 12px;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .main {
+    padding-top: 2em;
+  }
+  .logos {
+    margin-top: 70px;
+  }
+  .bg {
+    height: 29em;
+  }
+  .hero h1 {
+    font-size: 2.3em;
+    margin-top: 1.4em;
+  }
+  .hero h4 {
+    padding: 0%;
+    font-size: 1.35em;
+  }
+
+}
+@media only screen and (min-width: 1028px) {
+  .hero h4 {
+    padding: 0 5%;
+  }
 }
