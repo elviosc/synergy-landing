@@ -17,6 +17,7 @@ h4 { font-weight: 200; }
 
 .phone {
   color: rgb(108, 86, 59);
+  color: rgb(0, 115, 154);
   margin-top: 20px;
 }
 
@@ -38,7 +39,7 @@ h4 { font-weight: 200; }
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(119, 68, 8, 0.44);
+  background: rgba(8, 83, 119, 0.44);
 }
 .bg:after {
   content: " ";
@@ -112,6 +113,7 @@ h4 { font-weight: 200; }
   margin: 60px 0;
   border: none;
   background: #f7941d;
+  background: rgb(0,115,154);
   color: #fff;
 }
 
