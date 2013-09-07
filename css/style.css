@@ -51,7 +51,7 @@ h4 { font-weight: 200; }
   box-shadow: 0 -59px 65px 12px rgba(0, 0, 0, 0.5);
 }
 .hero h1 {
-  font-size: 1.8em;
+  font-size: 1.3em;
   margin: 1em auto;
   max-width: 12em;
 }
@@ -265,6 +265,11 @@ footer {
   font-size: 12px;
 }
 
+@media only screen and (min-width: 360px) {
+  .hero h1 {
+    font-size: 1.8em;
+  }
+}
 
 @media only screen and (min-width: 768px) {
   .main {
