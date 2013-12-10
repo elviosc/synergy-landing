@@ -1,22 +1,57 @@
 body, h1, h2, h3, h4, h5, h6, p {
   font-family: "Open Sans", sans;
+  color: #083E50;
 }
 
-body { font-weight: 300; }
+html, body { height: 100%; }
+body { font-weight: 300; color: #083E50; }
 
 h1, h4 { color: #fff; text-align: center; }
 h1 { margin-top: 60px; }
 h1:after { content: " "; display: block; height: 3px; background: #fff; width: 40%; margin: 30px auto; }
-h3 { font-size: 26px; }
+h3 { font-size: 26px; font-weight: 500 }
 h4 { font-weight: 200; }
+blockquote { border: none; }
+blockquote p { color: #083E50; }
+blockquote cite { color: #4B7A8A; }
+blockquote .photo {
+  position: relative;
+  overflow: hidden;
+  width: 4em;
+  height: 4em;
+  border-radius: 100%;
+  margin: -0.5em auto 0.5em;
+}
+
+.text-separator {
+  margin: 60px 0;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+.text-separator:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #083E50;
+  top: 0.65em;
+}
+.text-separator span {
+  position: relative;
+  background: #fff;
+  padding: 0 0.5em;
+}
 
 .logo {
   height: 60px;
-  margin: 10px 0;
+  margin: 15px auto 0px;
+  display: block;
 }
 
 .phone {
-  color: rgb(108, 86, 59);
+  color: rgb(0, 115, 154);
   margin-top: 20px;
 }
 
@@ -26,11 +61,11 @@ h4 { font-weight: 200; }
 .bg {
   position: absolute;
   width: 100%;
-  height: 20em;
+  height: 30.5em;
   background: url(../img/night-city.jpg);
   background-position: 0 -156px;
 }
-.bg:before {
+.bg:before, .photo:after {
   content: " ";
   display: block;
   position: absolute;
@@ -38,27 +73,21 @@ h4 { font-weight: 200; }
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(119, 68, 8, 0.44);
+  background: rgba(12, 64, 88, 0.72);
 }
-.bg:after {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 4em;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 -59px 65px 12px rgba(0, 0, 0, 0.5);
+.photo:after {
+  background: rgba(16, 66, 90, 0.12);
+}
+.hero {
+  min-height: 24.5em;
 }
 .hero h1 {
-  font-size: 1.3em;
-  margin: 1em auto;
-  max-width: 12em;
+  font-size: 2.5em;
+  max-width: 10em;
+  margin: 1.5em auto 1em;
 }
 .hero h4 {
-  padding: 0 2%;
-  font-size: 1.1em;
-  max-width: 30em;
+  max-width: 20em;
   margin: 0 auto;
 }
 .hero h1, .hero h4 {
@@ -66,18 +95,18 @@ h4 { font-weight: 200; }
   text-shadow: 0 0 1px rgba(0,0,0,1), 0 0 5px rgba(0,0,0,0.2);
 }
 .logos {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  opacity: 0.8;
+  margin: 60px 0 0;
+  padding: 60px 0 50px;
+  background: rgb(60,82,92);
 }
-.logos h4 {
-  margin-top: 0px;
-  text-shadow: none;
-  font-size: 1.2em;
+.logos h5 {
+  margin: 0 0 40px;
+  color: #fff;
+  text-transform: uppercase;
 }
 .main {
   font-size: 18px;
-  padding-top: .5em;
+  padding-top: 4em;
 }
 .main ul { list-style: none; }
 .main li {
@@ -88,33 +117,36 @@ h4 { font-weight: 200; }
     display: inline-block;
     width: 1em;
     height: 1em;
-    background: #222;
+    background: #083E50;
     border-radius: 100%;
     margin-right: 0.7em;
     margin-left: -1.7em;
     position: relative;
     top: 0.12em;
     border: 0.25em solid #fff;
-    box-shadow: 0 0 1px #222;
+    box-shadow: 0 0 1px #083E50;
 }
 
 .testimonial {
   font-size: 18px;
-  margin: 10px 0 60px;
+  margin: 2.5em auto 1em;
+  max-width: 28em;
 }
 
-.panel .primary.button {
-  width: 100%;
-  margin: 0;
-}
 
 .panel {
-  margin: 60px 0;
+  margin: 1.5em 0 0;
   border: none;
   background: #f7941d;
   color: #fff;
 }
-
+.panel .primary.button {
+  width: 100%;
+  margin: 0;
+}
+.panel small {
+  font-size: 70%;
+}
 .panel h3, .panel p, .panel label { color: #fff; }
 .panel button { border: 3px solid #fff; background: transparent; }
 .panel button:hover, .panel button:focus { background: rgba(255,255,255,0.2); }
@@ -229,7 +261,6 @@ select {
   font-weight: bold;
   text-transform: uppercase;
   width: 8.2em;
-
 }
 
 
@@ -258,41 +289,87 @@ select {
 
 footer {
   padding: 20px 0;
-  border-top: 1px solid #efefef;
+  background: rgb(18,40,50);
 }
 .copyright {
   color: #aaa;
   font-size: 12px;
 }
-
-@media only screen and (min-width: 360px) {
-  .hero h1 {
-    font-size: 1.8em;
-  }
+.bg {
+  height: 20em;
+}
+.hero {
+  min-height: 14.5em;
+}
+.hero h1 {
+  font-size: 1.8em;
 }
 
-@media only screen and (min-width: 768px) {
-  .main {
-    padding-top: 2em;
-  }
-  .logos {
-    margin-top: 70px;
+
+.phone {
+  text-align: center;
+}
+
+.phone {
+  margin-bottom: 30px;
+}
+
+h4 { line-height: 1.3; }
+
+@media only screen and (min-width: 40.063em) {
+  .logo {
+      margin: 10px 0;
   }
   .bg {
-    height: 29em;
+    height: 23em;
   }
   .hero h1 {
-    font-size: 2.3em;
-    margin-top: 1.4em;
+    font-size: 2.2em
   }
-  .hero h4 {
-    padding: 0%;
-    font-size: 1.35em;
+  .main {
+    padding-top: 4.5em;
+  }
+  .bg { height: 22.5em; }
+}
+
+@media only screen and (min-width: 64.063em) {
+  .bg { height: 25em; }
+  .hero h1 {
+    margin-top: 1.5em;
+    font-size: 2.5em;
   }
 
-}
-@media only screen and (min-width: 1028px) {
-  .hero h4 {
-    padding: 0 5%;
+  .main {
+    padding-top: 6em;
   }
+}
+
+
+/*  Thank You Page  */
+
+.thank-you .bg:before, .photo:after  {
+  background: rgba(12, 64, 88, 0.2)
+}
+.thank-you.bg-wrapper, .thank-you .bg {
+  height: 100%;
+}
+.thank-you .panel {
+  margin: 4em auto;
+  padding: 2em 1em;
+}
+.thank-you h1, .thank-you h2, .thank-you a, .thank-you .copyright {
+  color: white;
+}
+
+.thank-you h1 {
+  font-size: 3em;
+}
+.thank-you h2 {
+  font-size: 1.8em;
+}
+.thank-you .button {
+  margin: 3em auto 2em;
+  display: block;
+  max-width: 14em;
+  border: 3px solid #fff; background: transparent;
 }
