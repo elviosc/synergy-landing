@@ -51,8 +51,10 @@ blockquote .photo {
 }
 
 .phone {
+  text-align: center;
   color: rgb(0, 115, 154);
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .bg-wrapper {
@@ -305,20 +307,14 @@ footer {
   font-size: 1.8em;
 }
 
-
-.phone {
-  text-align: center;
-}
-
-.phone {
-  margin-bottom: 30px;
-}
-
 h4 { line-height: 1.3; }
 
 @media only screen and (min-width: 40.063em) {
   .logo {
       margin: 10px 0;
+  }
+  .phone {
+    text-align: right;
   }
   .bg {
     height: 23em;
